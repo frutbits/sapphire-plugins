@@ -1,2 +1,2 @@
-# template
-> A repository for Zhycorp's project base
+# sapphire-plugins
+> Plugins for sapphire framework

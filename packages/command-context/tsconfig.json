@@ -6,5 +6,5 @@
         "composite": true,
         "preserveConstEnums": true
 	},
-	"include": ["packages/**/*.ts"]
+	"include": ["src/**/*.ts"]
 }

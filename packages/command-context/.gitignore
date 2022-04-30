@@ -1,36 +1,3 @@
-# dependencies
-node_modules
-.pnp
-.pnp.js
-
-# testing
-coverage
-
-# next.js
-.next/
-out/
-build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# local env files
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-.env
-
-# turbo
-.turbo
-
 # Ignore a blackhole and the folder for development
 node_modules/
 .vs/
@@ -39,11 +6,19 @@ node_modules/
 coverage/
 docs/
 
+# Yarn files
+.yarn/install-state.gz
+.yarn/build-state.yml
+
+# Ignore tsc dist folder
+dist/
+
 # Ignore JavaScript files
 **/*.js
 **/*.mjs
 **/*.js.map
 **/*.d.ts
+!src/**/*.d.ts
 **/*.tsbuildinfo
 !jest.config.ts
 
