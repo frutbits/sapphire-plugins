@@ -34,8 +34,8 @@
     "node": ">=16.6.0",
     "npm": ">=7.0.0"
   },
+  "prettier": "@sapphire/prettier-config",
   "devDependencies": {
-    "@babel/types": "7.17.0",
     "@sapphire/eslint-config": "4.3.2",
     "@sapphire/prettier-config": "1.4.1",
     "@sapphire/ts-config": "^3.3.3",
