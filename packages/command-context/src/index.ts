@@ -1,3 +1,3 @@
-export const main = (): string => "Hello World!";
+const main = (): string => "Hello World!";
 
 export default main;

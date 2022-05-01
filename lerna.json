@@ -1,6 +1,25 @@
 {
-    "packages": [
-        "packages/*"
-    ],
-    "version": "0.0.0"
+	"packages": ["packages/*"],
+	"version": "independent",
+	"npmClient": "yarn",
+	"useWorkspaces": true,
+	"command": {
+		"publish": {
+			"conventionalCommits": true,
+			"push": true,
+			"ignoreChanges": ["**/*.md", "**/tests/**"],
+			"registry": "https://registry.npmjs.org/"
+		},
+		"version": {
+			"allowBranch": "main",
+			"conventionalCommits": true,
+			"push": true,
+			"createRelease": "github",
+			"message": "chore(release): publish"
+		},
+		"create": {
+			"license": "AGPL-3.0",
+			"keywords": ["plugin", "bot", "typescript", "ts", "yarn", "discord", "sapphire"]
+		}
+	}
 }

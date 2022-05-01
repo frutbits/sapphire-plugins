@@ -1,10 +1,11 @@
 {
-	"extends": "@sapphire/ts-config",
-    "compilerOptions": {
-        "rootDir": "./src",
-        "outDir": "./dist",
-        "composite": true,
-        "preserveConstEnums": true
+	"extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"outDir": "dist",
+		"rootDir": "src",
+		"composite": true,
+		"preserveConstEnums": true,
+		"tsBuildInfoFile": "./dist/.tsbuildinfo"
 	},
-	"include": ["src/**/*.ts"]
+	"include": ["src"]
 }
