@@ -93,6 +93,8 @@ export class BaseCommandContext {
         return this.data.context instanceof ContextMenuInteraction;
     }
 
+    public async send(options: InteractionReplyOptions | MessageOptions | MessagePayload, fetchReply?: true): Promise<Message>;
+    public async send(options: InteractionReplyOptions | MessageOptions | MessagePayload, fetchReply?: false): Promise<void>;
     public async send(options: InteractionReplyOptions | MessageOptions | MessagePayload, fetchReply = false) {
         if (this.isInteractionContext()) {
             if (this.isCommand()) {
@@ -107,8 +109,8 @@ export class BaseCommandContext {
             }
 
             const msg = await this.reply(typeof options === "string"
-                ? { content: options, fetchReply } as InteractionReplyOptions
-                : { ...options, fetchReply } as InteractionReplyOptions);
+                ? cast<InteractionReplyOptions>({ content: options, fetchReply })
+                : cast<InteractionReplyOptions>({ ...options, fetchReply }));
             return msg;
         }
 
