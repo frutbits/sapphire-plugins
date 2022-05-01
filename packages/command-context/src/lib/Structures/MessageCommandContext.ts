@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/consistent-type-imports */
 import type { Args } from "@sapphire/framework";
 import type { AwaitMessageCollectorOptionsParams, AwaitReactionsOptions, Collection, EmojiIdentifierResolvable, Message, MessageCollectorOptionsParams, MessageEditOptions, MessagePayload, MessageReaction, ReactionCollectorOptions, ReplyMessageOptions, StartThreadOptions } from "discord.js";
-import { BaseCommandContext } from "./BaseCommandContext.js";
+import { BaseCommandContext } from "./BaseCommandContext";
 
 export class MessageCommandContext<Cached extends boolean = boolean> extends BaseCommandContext {
     declare protected readonly data: { args: Args; context: Message<Cached> };

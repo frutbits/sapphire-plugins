@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/consistent-type-imports */
 import type { Args } from "@sapphire/framework";
 import { CommandInteraction, ContextMenuInteraction, Interaction, Message } from "discord.js";
-import type { MessageCommandContext } from "./MessageCommandContext.js";
+import type { MessageCommandContext } from "./MessageCommandContext";
 
 export class BaseCommandContext {
     protected readonly data!: { args: Args; context: CommandInteraction | ContextMenuInteraction | Message };
