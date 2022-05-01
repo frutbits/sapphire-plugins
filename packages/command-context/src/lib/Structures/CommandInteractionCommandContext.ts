@@ -9,8 +9,4 @@ export class CommandInteractionCommandContext extends BaseInteractionCommandCont
     public constructor(context: CommandInteraction, args?: Args) {
         super(context, args);
     }
-
-    public get options() {
-        return this.data.context.options;
-    }
 }

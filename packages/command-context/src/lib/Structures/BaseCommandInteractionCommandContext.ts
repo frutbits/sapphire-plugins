@@ -10,6 +10,10 @@ export class BaseInteractionCommandContext extends BaseCommandContext {
         super(context, args);
     }
 
+    public get options() {
+        return this.data.context.options;
+    }
+
     public get version() {
         return this.data.context.version;
     }
