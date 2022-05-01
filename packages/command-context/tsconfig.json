@@ -1,8 +1,6 @@
 {
-	"extends": "@sapphire/ts-config",
+	"extends": "../../tsconfig.base.json",
 	"compilerOptions": {
-		"importHelpers": true,
-		"noEmitHelpers": true,
 		"outDir": "dist",
 		"rootDir": "src",
 		"composite": true,
