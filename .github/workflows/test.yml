@@ -25,10 +25,10 @@ jobs:
         check-latest: true
         
     - name: Install dependencies
-      run: npm ci
+      run: yarn install
 
     - name: Lint code
-      run: npm run lint
+      run: yarn lint
   compile:
     needs: lint
     runs-on: ubuntu-latest
