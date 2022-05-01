@@ -12,15 +12,15 @@ export abstract class ContextCommand extends Command {
         super(context, options);
     }
 
-    public messageRun(message: Message, args: Args) {
+    public override messageRun(message: Message, args: Args) {
         return this.contextRun(new MessageCommandContext(message, args));
     }
 
-    public chatInputRun(interaction: CommandInteraction) {
+    public override chatInputRun(interaction: CommandInteraction) {
         return this.contextRun(new CommandInteractionCommandContext(interaction));
     }
 
-    public contextMenuRun(interaction: ContextMenuInteraction) {
+    public override contextMenuRun(interaction: ContextMenuInteraction) {
         return this.contextRun(new ContextMenuInteractionCommandContext(interaction));
     }
 
