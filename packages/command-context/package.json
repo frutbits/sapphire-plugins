@@ -1,5 +1,5 @@
 {
-    "name": "@zhycorp/command-context",
+    "name": "@zhycorporg/command-context",
     "description": "Wrapping all sapphire command (interaction, message) to one context",
     "author": "Zhycorp <contact@zhycorp.org>",
     "version": "0.0.0",
