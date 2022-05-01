@@ -39,3 +39,6 @@ package-lock.json
 
 # Ignore Turbo caching
 .turbo
+
+# Ignore test auth
+**/**tests/auth.test.ts
