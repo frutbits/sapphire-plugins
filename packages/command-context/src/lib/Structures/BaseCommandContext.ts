@@ -3,10 +3,13 @@
 /* eslint-disable @typescript-eslint/consistent-type-imports */
 import type { Args } from "@sapphire/framework";
 import { CommandInteraction, ContextMenuInteraction, Interaction, Message } from "discord.js";
+import type { BaseInteractionCommandContext } from "./BaseCommandInteractionCommandContext.js";
+import type { CommandInteractionCommandContext } from "./CommandInteractionCommandContext.js";
+import type { ContextMenuInteractionCommandContext } from "./ContextMenuInteractionCommandContext.js";
 import type { MessageCommandContext } from "./MessageCommandContext";
 
 export class BaseCommandContext {
-    protected readonly data!: { args: Args; context: CommandInteraction | ContextMenuInteraction | Message };
+    protected readonly data!: { args?: Args; context: CommandInteraction | ContextMenuInteraction | Message };
     public constructor(context: CommandInteraction | ContextMenuInteraction | Message, args: Args) {
         this.data.context = context;
         this.data.args = args;
@@ -72,7 +75,19 @@ export class BaseCommandContext {
         return this.data.context.inGuild();
     }
 
-    public isMessage(): this is MessageCommandContext {
+    public isMessageContext(): this is MessageCommandContext {
         return this.data.context instanceof Message;
+    }
+
+    public isInteractionContext(): this is BaseInteractionCommandContext {
+        return this.data.context instanceof Interaction;
+    }
+
+    public isCommandInteractionContext(): this is CommandInteractionCommandContext {
+        return this.data.context instanceof CommandInteraction;
+    }
+
+    public isContextMenuInteractionContext(): this is ContextMenuInteractionCommandContext {
+        return this.data.context instanceof ContextMenuInteraction;
     }
 }
