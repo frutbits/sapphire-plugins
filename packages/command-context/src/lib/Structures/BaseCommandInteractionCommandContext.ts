@@ -90,6 +90,10 @@ export class BaseInteractionCommandContext extends BaseCommandContext {
         return this.data.context.reply(options);
     }
 
+    public editReply(options: InteractionReplyOptions | MessagePayload | string) {
+        return this.data.context.editReply(options);
+    }
+
     public fetchReply() {
         return this.data.context.fetchReply();
     }

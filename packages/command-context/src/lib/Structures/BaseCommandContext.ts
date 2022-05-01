@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/consistent-type-assertions */
 /* eslint-disable @typescript-eslint/no-base-to-string */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/consistent-type-imports */
 import type { Args } from "@sapphire/framework";
-import { CommandInteraction, ContextMenuInteraction, Interaction, Message } from "discord.js";
+import { CommandInteraction, ContextMenuInteraction, Interaction, InteractionReplyOptions, Message, MessageOptions, MessagePayload } from "discord.js";
 import type { BaseInteractionCommandContext } from "./BaseCommandInteractionCommandContext.js";
 import type { CommandInteractionCommandContext } from "./CommandInteractionCommandContext.js";
 import type { ContextMenuInteractionCommandContext } from "./ContextMenuInteractionCommandContext.js";
@@ -89,5 +90,27 @@ export class BaseCommandContext {
 
     public isContextMenuInteractionContext(): this is ContextMenuInteractionCommandContext {
         return this.data.context instanceof ContextMenuInteraction;
+    }
+
+    public async send(options: InteractionReplyOptions | MessageOptions | MessagePayload, fetchReply = false) {
+        if (this.isInteractionContext()) {
+            if (this.isCommand()) {
+                if (this.deferred && !this.replied) {
+                    return this.editReply(options);
+                }
+                if (this.replied) {
+                    return this.followUp(typeof options === "string"
+                        ? { content: options, ephemeral: this.ephemeral ?? false } as InteractionReplyOptions
+                        : { ...options, ephemeral: this.ephemeral ?? false } as InteractionReplyOptions);
+                }
+            }
+
+            const msg = await this.reply(typeof options === "string"
+                ? { content: options, fetchReply } as InteractionReplyOptions
+                : { ...options, fetchReply } as InteractionReplyOptions);
+            return msg;
+        }
+
+        return this.channel?.send(options);
     }
 }
