@@ -42,7 +42,7 @@
         "build": "rimraf dist && tsc -b src && rollup -c rollup.bundle.ts && npm run esm:default",
         "esm:default": "gen-esm-wrapper dist/index.js dist/index.mjs",
         "lint": "eslint src tests --ext ts",
-        "lint:fix": "eslint src tests --ext ts",
+        "lint:fix": "eslint src tests --fix --ext ts",
         "format": "prettier --write {src,tests}/**/*.ts",
         "prepareForRelease": "npm run build && npm run format && npm run lint && npm run lint:fix",
         "test": "jest",
