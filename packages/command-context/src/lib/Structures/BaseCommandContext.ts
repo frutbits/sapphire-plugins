@@ -73,7 +73,7 @@ export class BaseCommandContext {
         return this.data.context.applicationId;
     }
 
-    public get inGuild() {
+    public inGuild() {
         return this.data.context.inGuild();
     }
 
