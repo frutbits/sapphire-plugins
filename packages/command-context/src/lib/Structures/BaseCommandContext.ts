@@ -3,6 +3,7 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/consistent-type-imports */
 import type { Args } from "@sapphire/framework";
+import { cast } from "@sapphire/utilities";
 import { CommandInteraction, ContextMenuInteraction, Interaction, InteractionReplyOptions, Message, MessageOptions, MessagePayload } from "discord.js";
 import type { BaseInteractionCommandContext } from "./BaseCommandInteractionCommandContext.js";
 import type { CommandInteractionCommandContext } from "./CommandInteractionCommandContext.js";
@@ -100,8 +101,8 @@ export class BaseCommandContext {
                 }
                 if (this.replied) {
                     return this.followUp(typeof options === "string"
-                        ? { content: options, ephemeral: this.ephemeral ?? false } as InteractionReplyOptions
-                        : { ...options, ephemeral: this.ephemeral ?? false } as InteractionReplyOptions);
+                        ? cast<InteractionReplyOptions>({ content: options, ephemeral: this.ephemeral ?? false })
+                        : cast<InteractionReplyOptions>({ ...options, ephemeral: this.ephemeral ?? false }));
                 }
             }
 
