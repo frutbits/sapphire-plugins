@@ -10,7 +10,7 @@ import type { MessageCommandContext } from "./MessageCommandContext";
 
 export class BaseCommandContext {
     protected readonly data!: { args?: Args; context: CommandInteraction | ContextMenuInteraction | Message };
-    public constructor(context: CommandInteraction | ContextMenuInteraction | Message, args: Args) {
+    public constructor(context: CommandInteraction | ContextMenuInteraction | Message, args?: Args) {
         this.data.context = context;
         this.data.args = args;
     }

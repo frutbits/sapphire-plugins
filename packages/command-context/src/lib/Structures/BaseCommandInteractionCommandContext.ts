@@ -6,7 +6,7 @@ import { BaseCommandContext } from "./BaseCommandContext";
 
 export class BaseInteractionCommandContext extends BaseCommandContext {
     declare protected readonly data: { context: CommandInteraction | ContextMenuInteraction };
-    public constructor(context: CommandInteraction | ContextMenuInteraction, args: Args) {
+    public constructor(context: CommandInteraction | ContextMenuInteraction, args?: Args) {
         super(context, args);
     }
 

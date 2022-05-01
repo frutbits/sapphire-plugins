@@ -6,7 +6,7 @@ import { BaseCommandContext } from "./BaseCommandContext";
 
 export class MessageCommandContext<Cached extends boolean = boolean> extends BaseCommandContext {
     declare protected readonly data: { args: Args; context: Message<Cached> };
-    public constructor(context: Message, args: Args) {
+    public constructor(context: Message, args?: Args) {
         super(context, args);
     }
 
