@@ -5,8 +5,8 @@ import type { AwaitMessageCollectorOptionsParams, AwaitReactionsOptions, Collect
 import { CommandContext } from "./CommandContext";
 
 export class MessageCommandContext<Cached extends boolean = boolean> extends CommandContext {
-    declare protected readonly data: { args: Args; context: Message<Cached> };
-    public constructor(context: Message, args: Args) {
+    declare protected readonly data: { args?: Args; context: Message<Cached> };
+    public constructor(context: Message, args?: Args) {
         super(context, args);
     }
 

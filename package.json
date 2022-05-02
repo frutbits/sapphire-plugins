@@ -57,6 +57,7 @@
   },
   "dependencies": {
     "@sapphire/framework": "next",
+    "@sapphire/pieces": "^3.3.1",
     "discord.js": "^13.6.0"
   }
 }
