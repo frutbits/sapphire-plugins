@@ -10,6 +10,10 @@ export class ContextMenuInteractionCommandContext extends BaseInteractionCommand
         super(context, args);
     }
 
+    public get options() {
+        return this.data.context.options;
+    }
+
     public get targetId() {
         return this.data.context.targetId;
     }

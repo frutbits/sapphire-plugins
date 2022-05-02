@@ -10,7 +10,7 @@ import type { CommandInteractionCommandContext } from "./CommandInteractionComma
 import type { ContextMenuInteractionCommandContext } from "./ContextMenuInteractionCommandContext.js";
 import type { MessageCommandContext } from "./MessageCommandContext";
 
-export class BaseCommandContext {
+export class CommandContext {
     protected readonly data!: { args?: Args; context: CommandInteraction | ContextMenuInteraction | Message };
     public constructor(context: CommandInteraction | ContextMenuInteraction | Message, args?: Args) {
         this.data.context = context;
