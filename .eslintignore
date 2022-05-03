@@ -3,4 +3,3 @@ node_modules/
 **/docs/**/*.js
 **/build/**/*.js
 **/*.d.ts
-packages/command-context/*.ts
