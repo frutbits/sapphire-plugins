@@ -3,8 +3,8 @@
 import { Args, Awaitable, Command, CommandOptions, PieceContext } from "@sapphire/framework";
 import type { CommandInteraction, ContextMenuInteraction, Message } from "discord.js";
 import type { CommandContext } from "./Structures/CommandContext";
-import { CommandInteractionCommandContext } from "./Structures/CommandInteractionCommandContext.js";
-import { ContextMenuInteractionCommandContext } from "./Structures/ContextMenuInteractionCommandContext.js";
+import { CommandInteractionCommandContext } from "./Structures/CommandInteractionCommandContext";
+import { ContextMenuInteractionCommandContext } from "./Structures/ContextMenuInteractionCommandContext";
 import { MessageCommandContext } from "./Structures/MessageCommandContext";
 
 export abstract class ContextCommand extends Command {
