@@ -2,16 +2,12 @@
 /* eslint-disable @typescript-eslint/consistent-type-imports */
 import type { Args } from "@sapphire/framework";
 import type { CommandInteraction, ContextMenuInteraction, InteractionDeferReplyOptions, InteractionReplyOptions, MessagePayload } from "discord.js";
-import { BaseCommandContext } from "./BaseCommandContext";
+import { CommandContext } from "./CommandContext";
 
-export class BaseInteractionCommandContext extends BaseCommandContext {
+export class BaseInteractionCommandContext extends CommandContext {
     declare protected readonly data: { context: CommandInteraction | ContextMenuInteraction };
     public constructor(context: CommandInteraction | ContextMenuInteraction, args?: Args) {
         super(context, args);
-    }
-
-    public get options() {
-        return this.data.context.options;
     }
 
     public get version() {

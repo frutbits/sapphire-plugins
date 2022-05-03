@@ -4,17 +4,16 @@
 /* eslint-disable @typescript-eslint/consistent-type-imports */
 import type { Args } from "@sapphire/framework";
 import { cast } from "@sapphire/utilities";
-import { CommandInteraction, ContextMenuInteraction, Interaction, InteractionReplyOptions, Message, MessageOptions, MessagePayload } from "discord.js";
-import type { BaseInteractionCommandContext } from "./BaseCommandInteractionCommandContext.js";
-import type { CommandInteractionCommandContext } from "./CommandInteractionCommandContext.js";
-import type { ContextMenuInteractionCommandContext } from "./ContextMenuInteractionCommandContext.js";
+import { CommandInteraction, ContextMenuInteraction, GuildMember, Interaction, InteractionReplyOptions, Message, MessageOptions, MessagePayload } from "discord.js";
+import type { BaseInteractionCommandContext } from "./BaseCommandInteractionCommandContext";
+import type { CommandInteractionCommandContext } from "./CommandInteractionCommandContext";
+import type { ContextMenuInteractionCommandContext } from "./ContextMenuInteractionCommandContext";
 import type { MessageCommandContext } from "./MessageCommandContext";
 
-export class BaseCommandContext {
+export class CommandContext {
     protected readonly data!: { args?: Args; context: CommandInteraction | ContextMenuInteraction | Message };
     public constructor(context: CommandInteraction | ContextMenuInteraction | Message, args?: Args) {
-        this.data.context = context;
-        this.data.args = args;
+        this.data = { context, args };
     }
 
     public get id() {
@@ -41,8 +40,8 @@ export class BaseCommandContext {
         return this.data.context.createdAt;
     }
 
-    public get member() {
-        return this.data.context.member;
+    public get member(): GuildMember | null {
+        return cast<GuildMember>(this.data.context.member);
     }
 
     public get guildId() {
@@ -93,9 +92,9 @@ export class BaseCommandContext {
         return this.data.context instanceof ContextMenuInteraction;
     }
 
-    public async send(options: InteractionReplyOptions | MessageOptions | MessagePayload, fetchReply?: true): Promise<Message>;
-    public async send(options: InteractionReplyOptions | MessageOptions | MessagePayload, fetchReply?: false): Promise<void>;
-    public async send(options: InteractionReplyOptions | MessageOptions | MessagePayload, fetchReply = false) {
+    public async send(options: InteractionReplyOptions | MessageOptions | MessagePayload | string, fetchReply?: true): Promise<Message>;
+    public async send(options: InteractionReplyOptions | MessageOptions | MessagePayload | string, fetchReply?: false): Promise<void>;
+    public async send(options: InteractionReplyOptions | MessageOptions | MessagePayload | string, fetchReply = false) {
         if (this.isInteractionContext()) {
             if (this.isCommand()) {
                 if (this.deferred && !this.replied) {
@@ -114,6 +113,6 @@ export class BaseCommandContext {
             return msg;
         }
 
-        return this.channel?.send(options);
+        return this.channel!.send(options);
     }
 }
