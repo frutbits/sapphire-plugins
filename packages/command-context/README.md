@@ -30,7 +30,6 @@ export class PingCommand extends ContextCommand {
             name: this.name,
             description: this.description
         }, {
-            guildIds,
             behaviorWhenNotIdentical: RegisterBehavior.Overwrite,
             registerCommandIfMissing: true
         });
