@@ -3,10 +3,10 @@
 
 # Instalation 
 ```
-npm install @zhycorporg/command-context
+npm install @sapphire/framework@next discord.js @sapphire/utilities @zhycorporg/command-context
 ```
 
-# Example 
+# Example ContextCommand
 ```ts
 import { ApplyOptions } from "@sapphire/decorators";
 import { ApplicationCommandRegistry, RegisterBehavior, Command } from "@sapphire/framework";
@@ -34,6 +34,29 @@ export class PingCommand extends ContextCommand {
             behaviorWhenNotIdentical: RegisterBehavior.Overwrite,
             registerCommandIfMissing: true
         });
+    }
+}
+```
+
+# Example ContextPrecondition
+```ts
+import { ApplyOptions } from "@sapphire/decorators";
+import type { Precondition } from "@sapphire/framework";
+import { CommandContext, ContextPrecondition } from "@zhycorporg/command-context";
+
+@ApplyOptions<Precondition.Options>({
+    name: "isAdministrator"
+})
+
+export class isAdministrator extends ContextPrecondition {
+    public contextRun(context: CommandContext) {
+        return context.member!.id === context.guild?.ownerId ? this.ok() : this.error({ message: "You are not an administrator." });
+    }
+}
+
+declare module "@sapphire/framework" {
+    interface Preconditions {
+        isAdministrator: never;
     }
 }
 ```
