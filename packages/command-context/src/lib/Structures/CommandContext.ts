@@ -107,6 +107,17 @@ export class CommandContext {
                 }
             }
 
+            if (this.isContextMenu()) {
+                if (this.deferred && !this.replied) {
+                    return this.editReply(options);
+                }
+                if (this.replied) {
+                    return this.followUp(typeof options === "string"
+                        ? cast<InteractionReplyOptions>({ content: options, ephemeral: this.ephemeral ?? false })
+                        : cast<InteractionReplyOptions>({ ...options, ephemeral: this.ephemeral ?? false }));
+                }
+            }
+
             const msg = await this.reply(typeof options === "string"
                 ? cast<InteractionReplyOptions>({ content: options, fetchReply })
                 : cast<InteractionReplyOptions>({ ...options, fetchReply }));
