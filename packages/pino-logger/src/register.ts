@@ -8,7 +8,7 @@ import { PinoLogger } from "./lib/PinoLogger.js";
 
 export class PinoLoggerPlugin extends Plugin {
     public static [preGenericsInitialization](this: SapphireClient, options: ClientOptions) {
-        options.logger ??= { pino: { timestamp: true } };
+        options.logger ??= { pino: { } };
         options.logger.instance = new PinoLogger(options.logger.pino);
     }
 }
