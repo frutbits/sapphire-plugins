@@ -1,6 +1,6 @@
 /* eslint-disable class-methods-use-this */
 /* eslint-disable @typescript-eslint/consistent-type-imports */
-import type { ILogger, LogLevel } from "@sapphire/framework";
+import type { ILogger } from "@sapphire/framework";
 import pino, { LoggerOptions, Logger } from "pino";
 
 export class PinoLogger implements ILogger {
@@ -34,12 +34,10 @@ export class PinoLogger implements ILogger {
     }
 
     public has(): boolean {
-        /** NOTE: please review this and tell the equivalent to pino. */
         return true;
     }
 
-    public write(_level: LogLevel, ...values: readonly unknown[]): void {
-        /** NOTE: please review this and tell the equivalent to pino. */
-        this.pino.info(values);
+    public write(): void {
+        throw new Error("Method is not implemented.");
     }
 }

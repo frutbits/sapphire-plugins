@@ -4,7 +4,7 @@
 import { Plugin, preGenericsInitialization, SapphireClient } from "@sapphire/framework";
 import type { ClientOptions } from "discord.js";
 import type { LoggerOptions } from "pino";
-import { PinoLogger } from "./lib/PinoLogger.js";
+import { PinoLogger } from "./lib/PinoLogger";
 
 export class PinoLoggerPlugin extends Plugin {
     public static [preGenericsInitialization](this: SapphireClient, options: ClientOptions) {
