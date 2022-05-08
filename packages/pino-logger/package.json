@@ -11,9 +11,9 @@
             "require": "./dist/index.js"
         },
         "./register": {
-			"import": "./dist/register.mjs",
-			"require": "./dist/register.js",
-			"types": "./dist/register.d.ts"
+			"import": "./register.mjs",
+			"require": "./register.js",
+			"types": "./register.d.ts"
 		}
     },
     "files": [
@@ -48,8 +48,9 @@
         }
     },
     "scripts": {
-        "build": "rimraf dist && tsc -b src && rollup -c rollup.bundle.ts && npm run esm:default",
+        "build": "rimraf dist && tsc -b src && rollup -c rollup.bundle.ts && npm run esm:default && npm run esm:register",
         "esm:default": "gen-esm-wrapper dist/index.js dist/index.mjs",
+        "esm:register": "gen-esm-wrapper dist/register.js dist/register.mjs",
         "lint": "eslint src tests --ext ts",
         "lint:fix": "eslint src tests --fix --ext ts",
         "format": "prettier --write {src,tests}/**/*.ts",
