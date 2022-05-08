@@ -15,6 +15,9 @@ export class PinoLoggerPlugin extends Plugin {
 
 declare module "@sapphire/framework" {
     export interface ClientLoggerOptions {
+        /**
+         * @link https://getpino.io/#/docs/api?id=options
+         */
         pino: LoggerOptions;
     }
 }

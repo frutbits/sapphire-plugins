@@ -5,6 +5,9 @@ import pino, { LoggerOptions, Logger } from "pino";
 
 export class PinoLogger implements ILogger {
     protected pino: Logger;
+    /**
+     * @link https://getpino.io/#/docs/api?id=options
+     */
     public constructor(options: LoggerOptions) {
         this.pino = pino(options);
     }
