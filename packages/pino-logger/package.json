@@ -2,7 +2,7 @@
     "name": "@zhycorporg/pino-logger",
     "description": "Plugin for @sapphire/framework to have pino logger",
     "author": "Zhycorp <contact@zhycorp.org>",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
     "exports": {
@@ -11,10 +11,10 @@
             "require": "./dist/index.js"
         },
         "./register": {
-			"import": "./register.mjs",
-			"require": "./register.js",
-			"types": "./register.d.ts"
-		}
+            "import": "./register.mjs",
+            "require": "./register.js",
+            "types": "./register.d.ts"
+        }
     },
     "files": [
         "dist/**/*.js*",
