@@ -9,27 +9,27 @@ export class PinoLogger implements ILogger {
         this.pino = pino(options);
     }
 
-    public trace(...values: readonly [string]): void {
+    public trace(...values: readonly [unknown]): void {
         this.pino.trace(...values);
     }
 
-    public debug(...values: readonly [string]): void {
+    public debug(...values: readonly [unknown]): void {
         this.pino.debug(...values);
     }
 
-    public info(...values: readonly [string]): void {
+    public info(...values: readonly [unknown]): void {
         this.pino.info(...values);
     }
 
-    public warn(...values: readonly [string]): void {
+    public warn(...values: readonly [unknown]): void {
         this.pino.warn(...values);
     }
 
-    public error(...values: readonly [string]): void {
+    public error(...values: readonly [unknown]): void {
         this.pino.error(...values);
     }
 
-    public fatal(...values: readonly [string]): void {
+    public fatal(...values: readonly [unknown]): void {
         this.pino.fatal(...values);
     }
 
