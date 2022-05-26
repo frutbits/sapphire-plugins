@@ -19,7 +19,8 @@
     "files": [
         "dist/**/*.js*",
         "dist/**/*.mjs*",
-        "dist/**/*.d*"
+        "dist/**/*.d*",
+        "register.*"
     ],
     "license": "AGPL-3.0",
     "homepage": "https://github.com/zhycorp/sapphire-plugins/tree/main/packages/pino-logger",
