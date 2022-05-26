@@ -1,12 +1,23 @@
-# @zhycorporg/command-context
-> Wrapping all sapphire command (interaction, message) to one context
+<div align="center">
 
-# Instalation 
+<img src="https://api.zhycorp.org/assets/images/logo.webp" alt="Zhycorp Logo" width="200px" height="200px"/>
+
+# @zhycorporg/command-context
+
+**Wrapping all sapphire commands (interaction, message) in one context**
+
+[![GitHub](https://img.shields.io/npm/l/@zhycorporg/command-context)](https://github.com/zhycorp/sapphire-plugins/blob/main/packages/command-context/LICENSE)
+[![npm](https://img.shields.io/npm/v/@zhycorporg/command-context?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/@zhycorporg/command-context)
+[![Discord](https://discordapp.com/api/guilds/332877090003091456/embed.png)](https://zhycorp.org/discord)
+
+</div>
+
+# Installation 
 ```
 npm install @sapphire/framework@next discord.js @sapphire/utilities @zhycorporg/command-context
 ```
 
-# Example ContextCommand
+# Example `ContextCommand`
 ```ts
 import { ApplyOptions } from "@sapphire/decorators";
 import { ApplicationCommandRegistry, RegisterBehavior, Command } from "@sapphire/framework";
@@ -37,7 +48,7 @@ export class PingCommand extends ContextCommand {
 }
 ```
 
-# Example ContextPrecondition
+# Example `ContextPrecondition`
 ```ts
 import { ApplyOptions } from "@sapphire/decorators";
 import type { Precondition } from "@sapphire/framework";
