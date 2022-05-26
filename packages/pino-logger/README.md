@@ -1,5 +1,16 @@
+<div align="center">
+
+<img src="https://api.zhycorp.org/assets/images/logo.webp" alt="Zhycorp Logo" width="200px" height="200px"/>
+
 # @zhycorporg/pino-logger
-> Plugin for @sapphire/framework to have pino logger
+
+**Plugin for @sapphire/framework to have pino logger**
+
+[![GitHub](https://img.shields.io/npm/l/@zhycorporg/pino-logger)](https://github.com/zhycorp/sapphire-plugins/blob/main/packages/command-context/LICENSE)
+[![npm](https://img.shields.io/npm/v/@zhycorporg/pino-logger?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/@zhycorporg/pino-logger)
+[![Discord](https://discordapp.com/api/guilds/332877090003091456/embed.png)](https://zhycorp.org/discord)
+
+</div>
 
 # Instalation 
 ```
