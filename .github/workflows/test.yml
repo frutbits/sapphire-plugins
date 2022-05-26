@@ -46,4 +46,4 @@ jobs:
         run: npm ci
 
       - name: Test compile
-        run: npm run compile && rm -rf dist
+        run: npm run build
