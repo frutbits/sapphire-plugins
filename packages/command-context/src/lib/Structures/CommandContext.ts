@@ -1,7 +1,6 @@
-/* eslint-disable @typescript-eslint/consistent-type-assertions */
+/* eslint-disable @typescript-eslint/consistent-type-imports */
 /* eslint-disable @typescript-eslint/no-base-to-string */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-/* eslint-disable @typescript-eslint/consistent-type-imports */
 import type { Args } from "@sapphire/framework";
 import { cast } from "@sapphire/utilities";
 import { CommandInteraction, ContextMenuInteraction, GuildMember, Interaction, InteractionReplyOptions, Message, MessageOptions, MessagePayload } from "discord.js";
@@ -98,7 +97,7 @@ export class CommandContext {
         if (this.isInteractionContext()) {
             if (this.isCommand()) {
                 if (this.deferred && !this.replied) {
-                    return this.editReply(options);
+                    return this.editReply(cast<InteractionReplyOptions | MessagePayload | string>(options));
                 }
                 if (this.replied) {
                     return this.followUp(typeof options === "string"
@@ -109,7 +108,7 @@ export class CommandContext {
 
             if (this.isContextMenu()) {
                 if (this.deferred && !this.replied) {
-                    return this.editReply(options);
+                    return this.editReply(cast<InteractionReplyOptions | MessagePayload | string>(options));
                 }
                 if (this.replied) {
                     return this.followUp(typeof options === "string"
@@ -124,6 +123,6 @@ export class CommandContext {
             return msg;
         }
 
-        return this.channel!.send(options);
+        return this.channel!.send(cast<MessageOptions | MessagePayload | string>(options));
     }
 }
