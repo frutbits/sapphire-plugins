@@ -35,7 +35,7 @@ coverage/
 docs/
 
 # Ignore package locks
-package-lock.json
+packages/**/package-lock.json
 
 # Ignore Turbo caching
 .turbo
