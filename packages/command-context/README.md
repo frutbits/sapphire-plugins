@@ -1,27 +1,27 @@
 <div align="center">
 
-<img src="https://api.zhycorp.org/assets/images/logo.webp" alt="Zhycorp Logo" width="200px" height="200px"/>
+<img src="https://api.frutbits.org/assets/images/logo.webp" alt="FrutBits Indonesia Logo" width="200px" height="200px"/>
 
-# @zhycorporg/command-context
+# @frutbits/command-context
 
 **Wrapping all sapphire commands (interaction, message) in one context**
 
-[![GitHub](https://img.shields.io/npm/l/@zhycorporg/command-context)](https://github.com/zhycorp/sapphire-plugins/blob/main/packages/command-context/LICENSE)
-[![npm](https://img.shields.io/npm/v/@zhycorporg/command-context?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/@zhycorporg/command-context)
-[![Discord](https://discordapp.com/api/guilds/332877090003091456/embed.png)](https://zhycorp.org/discord)
+[![GitHub](https://img.shields.io/npm/l/@frutbits/command-context)](https://github.com/frutbits/sapphire-plugins/blob/main/packages/command-context/LICENSE)
+[![npm](https://img.shields.io/npm/v/@frutbits/command-context?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/@frutbits/command-context)
+[![Discord](https://discord.com/api/guilds/332877090003091456/embed.png)](https://frutbits.org/discord)
 
 </div>
 
 # Installation 
 ```
-npm install @sapphire/framework@next discord.js @sapphire/utilities @zhycorporg/command-context
+npm install @sapphire/framework@next discord.js @sapphire/utilities @frutbits/command-context
 ```
 
 # Example `ContextCommand`
 ```ts
 import { ApplyOptions } from "@sapphire/decorators";
 import { ApplicationCommandRegistry, RegisterBehavior, Command } from "@sapphire/framework";
-import { CommandContext } from "@zhycorporg/command-context";
+import { CommandContext } from "@frutbits/command-context";
 
 @ApplyOptions<Command.Options>({
     name: "ping",
@@ -52,7 +52,7 @@ export class PingCommand extends ContextCommand {
 ```ts
 import { ApplyOptions } from "@sapphire/decorators";
 import type { Precondition } from "@sapphire/framework";
-import { CommandContext, ContextPrecondition } from "@zhycorporg/command-context";
+import { CommandContext, ContextPrecondition } from "@frutbits/command-context";
 
 @ApplyOptions<Precondition.Options>({
     name: "isAdministrator"

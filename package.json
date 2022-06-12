@@ -1,5 +1,5 @@
 {
-  "name": "@zhycorp/sapphire-plugins",
+  "name": "@frutbits/sapphire-plugins",
   "private": true,
   "version": "0.0.0",
   "workspaces": [
@@ -19,18 +19,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zhycorp/sapphire-plugins.git"
+    "url": "git+https://github.com/frutbits/sapphire-plugins.git"
   },
   "keywords": [
     "js",
     "typescript"
   ],
-  "author": "Zhycorp <contact@zhycorp.org>",
+  "author": "FrutBits Indonesia <contact@frutbits.org>",
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/zhycorp/sapphire-plugins/issues"
+    "url": "https://github.com/frutbits/sapphire-plugins/issues"
   },
-  "homepage": "https://zhycorp.org/",
+  "homepage": "https://frutbits.org/",
   "engines": {
     "node": ">=16.6.0",
     "npm": ">=7.0.0"
