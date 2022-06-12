@@ -64,6 +64,6 @@
     "@sapphire/framework": "next",
     "@sapphire/pieces": "^3.3.3",
     "discord.js": "^13.8.0",
-    "pino-pretty": "^7.6.1"
+    "pino-pretty": "^8.0.0"
   }
 }
