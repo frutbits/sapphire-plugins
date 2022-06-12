@@ -37,7 +37,7 @@
   },
   "prettier": "@sapphire/prettier-config",
   "devDependencies": {
-    "@hazmi35/eslint-config": "^8.3.0",
+    "@hazmi35/eslint-config": "^8.4.2",
     "@sapphire/prettier-config": "1.4.3",
     "@sapphire/ts-config": "^3.3.4",
     "@types/jest": "^27.5.1",
