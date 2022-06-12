@@ -1,8 +1,8 @@
 {
-    "name": "@zhycorporg/pino-logger",
+    "name": "@frutbits/pino-logger",
     "description": "Plugin for @sapphire/framework to have pino logger",
-    "author": "Zhycorp <contact@zhycorp.org>",
-    "version": "1.0.3",
+    "author": "FrutBits Indonesia <contact@frutbits.org>",
+    "version": "1.0.4",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
     "exports": {
@@ -23,16 +23,16 @@
         "register.*"
     ],
     "license": "AGPL-3.0",
-    "homepage": "https://github.com/zhycorp/sapphire-plugins/tree/main/packages/pino-logger",
+    "homepage": "https://github.com/frutbits/sapphire-plugins/tree/main/packages/pino-logger",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/zhycorp/sapphire-plugins.git",
+        "url": "git+https://github.com/frutbits/sapphire-plugins.git",
         "directory": "packages/command-context"
     },
     "bugs": {
-        "url": "https://github.com/zhycorp/sapphire-plugins/issues"
+        "url": "https://github.com/frutbits/sapphire-plugins/issues"
     },
-    "readme": "https://github.com/zhycorp/sapphire-plugins/blob/main/README.md",
+    "readme": "https://github.com/frutbits/sapphire-plugins/blob/main/README.md",
     "engines": {
         "node": ">=16.6.0",
         "npm": ">=7.0.0"

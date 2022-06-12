@@ -14,7 +14,7 @@
 		"mangle": false,
 		"smartypants": true
 	},
-	"name": "Zhycorp Sapphire Plugins",
+	"name": "FrutBits Sapphire Plugins",
 	"out": "./docs/",
 	"readme": "./README.md",
 	"tsconfig": "./tsconfig.dev.json"

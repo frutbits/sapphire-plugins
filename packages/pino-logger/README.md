@@ -1,20 +1,20 @@
 <div align="center">
 
-<img src="https://api.zhycorp.org/assets/images/logo.webp" alt="Zhycorp Logo" width="200px" height="200px"/>
+<img src="https://api.frutbits.org/assets/images/logo.webp" alt="FrutBits Indonesia Logo" width="200px" height="200px"/>
 
-# @zhycorporg/pino-logger
+# @frutbits/pino-logger
 
 **Plugin for @sapphire/framework to have pino logger**
 
-[![GitHub](https://img.shields.io/npm/l/@zhycorporg/pino-logger)](https://github.com/zhycorp/sapphire-plugins/blob/main/packages/command-context/LICENSE)
-[![npm](https://img.shields.io/npm/v/@zhycorporg/pino-logger?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/@zhycorporg/pino-logger)
-[![Discord](https://discordapp.com/api/guilds/332877090003091456/embed.png)](https://zhycorp.org/discord)
+[![GitHub](https://img.shields.io/npm/l/@frutbits/pino-logger)](https://github.com/frutbits/sapphire-plugins/blob/main/packages/command-context/LICENSE)
+[![npm](https://img.shields.io/npm/v/@frutbits/pino-logger?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/@frutbits/pino-logger)
+[![Discord](https://discordapp.com/api/guilds/332877090003091456/embed.png)](https://frutbits.org/discord)
 
 </div>
 
 # Instalation 
 ```
-npm install @sapphire/framework discord.js @zhycorporg/pino-logger
+npm install @sapphire/framework discord.js @frutbits/pino-logger
 ```
 
 # Example
@@ -22,7 +22,7 @@ npm install @sapphire/framework discord.js @zhycorporg/pino-logger
 import { SapphireClient, SapphireClientOptions } from "@sapphire/framework";
 import { Intents } from "discord.js";
 import { join } from "node:path";
-import "@zhycorporg/pino-logger/register";
+import "@frutbits/pino-logger/register";
 
 class TestClient extends SapphireClient {
     public constructor(clientOptions?: SapphireClientOptions) {
@@ -49,7 +49,7 @@ class TestClient extends SapphireClient {
 import { SapphireClient, SapphireClientOptions } from "@sapphire/framework";
 import { Intents } from "discord.js";
 import { join } from "node:path";
-import "@zhycorporg/pino-logger/register";
+import "@frutbits/pino-logger/register";
 
 class TestClient extends SapphireClient {
     public constructor(clientOptions?: SapphireClientOptions) {
