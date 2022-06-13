@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/frutbits/sapphire-plugins/compare/@frutbits/pino-logger@1.0.6...@frutbits/pino-logger@2.0.0) (2022-06-13)
+
+**Note:** Version bump only for package @frutbits/pino-logger
+
+
+
+
+
 ## [1.0.6](https://github.com/frutbits/sapphire-plugins/compare/@frutbits/pino-logger@1.0.5...@frutbits/pino-logger@1.0.6) (2022-06-13)
 
 **Note:** Version bump only for package @frutbits/pino-logger
