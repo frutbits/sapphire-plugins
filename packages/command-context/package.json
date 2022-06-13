@@ -58,7 +58,6 @@
     },
     "dependencies": {
         "@sapphire/decorators": "^4.3.5",
-        "@sapphire/framework": "^3.0.0-next.838919c.0",
         "@sapphire/utilities": "^3.6.2",
         "discord.js": "^13.8.0"
     }
