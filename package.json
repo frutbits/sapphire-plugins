@@ -60,7 +60,7 @@
     "typescript": "4.7.3"
   },
   "dependencies": {
-    "@sapphire/decorators": "^4.3.4",
+    "@sapphire/decorators": "^4.3.5",
     "@sapphire/framework": "next",
     "@sapphire/pieces": "^3.3.3",
     "discord.js": "^13.8.0",
