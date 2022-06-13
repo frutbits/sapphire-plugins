@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.3](https://github.com/frutbits/sapphire-plugins/compare/@frutbits/pino-logger@2.0.1...@frutbits/pino-logger@2.0.3) (2022-06-13)
+
+
+### Bug Fixes
+
+* **Pino:** String message parameter ([#32](https://github.com/frutbits/sapphire-plugins/issues/32)) ([a4642ca](https://github.com/frutbits/sapphire-plugins/commit/a4642ca8a8835936b22a21c537dce2cd2bee6fd8))
+
+
+
+
+
 ## [2.0.2](https://github.com/frutbits/sapphire-plugins/compare/@frutbits/pino-logger@2.0.1...@frutbits/pino-logger@2.0.2) (2022-06-13)
 
 
