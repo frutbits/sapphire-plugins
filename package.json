@@ -61,6 +61,7 @@
     "typescript": "4.7.3"
   },
   "dependencies": {
-    "@sapphire/framework": "^3.0.0-next.838919c.0"
+    "@sapphire/framework": "^3.0.0-next.838919c.0",
+    "pino-pretty": "^8.0.0"
   }
 }
