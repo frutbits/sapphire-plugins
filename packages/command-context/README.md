@@ -25,7 +25,7 @@ import { CommandContext } from "@frutbits/command-context";
 
 @ApplyOptions<Command.Options>({
     name: "ping",
-    description: "A ping command !",
+    description: "A ping command!",
     chatInputCommand: {
         register: true
     }

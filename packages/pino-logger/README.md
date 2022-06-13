@@ -8,7 +8,7 @@
 
 [![GitHub](https://img.shields.io/npm/l/@frutbits/pino-logger)](https://github.com/frutbits/sapphire-plugins/blob/main/packages/command-context/LICENSE)
 [![npm](https://img.shields.io/npm/v/@frutbits/pino-logger?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/@frutbits/pino-logger)
-[![Discord](https://discordapp.com/api/guilds/332877090003091456/embed.png)](https://frutbits.org/discord)
+[![Discord](https://discord.com/api/guilds/332877090003091456/embed.png)](https://frutbits.org/discord)
 
 </div>
 
