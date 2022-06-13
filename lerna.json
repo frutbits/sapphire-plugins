@@ -7,7 +7,7 @@
 		"publish": {
 			"conventionalCommits": true,
 			"push": true,
-			"ignoreChanges": ["**/*.md", "**/tests/**"],
+			"ignoreChanges": ["**/tests/**"],
 			"registry": "https://registry.npmjs.org/"
 		},
 		"version": {
