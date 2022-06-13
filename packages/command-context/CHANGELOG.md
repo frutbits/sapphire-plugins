@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://github.com/frutbits/sapphire-plugins/compare/@frutbits/command-context@1.1.4...@frutbits/command-context@1.1.5) (2022-06-13)
+
+**Note:** Version bump only for package @frutbits/command-context
+
+
+
+
+
 ## 1.1.4 (2022-06-13)
 
 
