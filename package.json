@@ -15,7 +15,8 @@
     "build": "turbo run build",
     "update": "yarn upgrade-interactive",
     "check-update": "turbo run check-update",
-    "docs": "typedoc"
+    "docs": "typedoc",
+    "release": "lerna publish from-package --yes"
   },
   "repository": {
     "type": "git",
