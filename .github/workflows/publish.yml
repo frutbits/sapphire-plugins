@@ -31,6 +31,6 @@ jobs:
         run: npm run build
 
       - name: Publish package to npm and GitHub packages registry
-        run: npm run release -- --registry ${{ matrix.registry }}
+        run: npm run release -- --registry ${{ matrix.registry }} --no-verify-access
         env:
           NODE_AUTH_TOKEN: ${{ secrets[matrix.token_secret_key] }}
