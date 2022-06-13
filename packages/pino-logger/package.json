@@ -2,7 +2,7 @@
     "name": "@frutbits/pino-logger",
     "description": "Plugin for @sapphire/framework to have pino logger",
     "author": "FrutBits Indonesia <contact@frutbits.org>",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
     "exports": {
