@@ -7,14 +7,11 @@
   ],
   "description": "Plugins for sapphire framework",
   "scripts": {
+    "build": "turbo run build",
     "clean": "rimraf \"packages/**/dist\" \"packages/**/.turbo\"",
+    "format": "turbo run format",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
-    "format": "prettier --write \"packages/**/{src,tests,scripts}/**/*.{mjs,ts,js}\"",
-    "test": "turbo run test",
-    "build": "turbo run build",
-    "update": "yarn upgrade-interactive",
-    "check-update": "turbo run check-update",
     "docs": "typedoc",
     "release": "lerna publish from-package --yes"
   },
