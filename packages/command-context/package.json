@@ -26,7 +26,7 @@
     "bugs": {
         "url": "https://github.com/frutbits/sapphire-plugins/issues"
     },
-    "readme": "https://github.com/frutbits/sapphire-plugins/blob/main/README.md",
+    "readme": "https://github.com/frutbits/sapphire-plugins/blob/main/packages/command-context/README.md",
     "engines": {
         "node": ">=16.6.0",
         "npm": ">=7.0.0"
