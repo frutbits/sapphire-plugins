@@ -53,6 +53,7 @@
     },
     "devDependencies": {
         "@hazmi35/eslint-config": "^8.4.2",
+        "@sapphire/framework": "^3.0.0-next.9d876ff.0",
         "@sapphire/prettier-config": "1.4.3",
         "@typescript-eslint/eslint-plugin": "^5.28.0",
         "@typescript-eslint/parser": "^5.28.0",
