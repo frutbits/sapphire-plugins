@@ -38,7 +38,7 @@
     "lerna": "^5.1.6",
     "rimraf": "3.0.2",
     "turbo": "latest",
-    "typedoc": "^0.22.17",
+    "typedoc": "^0.22.18",
     "typedoc-plugin-djs-links": "^1.0.4",
     "typedoc-plugin-mdn-links": "^1.0.6"
   }
