@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/frutbits/sapphire-plugins/compare/v3.0.0...v3.1.0) (2022-06-27)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([c7f54b8](https://github.com/frutbits/sapphire-plugins/commit/c7f54b81e71e624fd9870d4de1e9c734dd3c2de3))
+
+
+### Features
+
+* modal support ([0ef2258](https://github.com/frutbits/sapphire-plugins/commit/0ef22585c018f9694e06bb0daeb17126c7a1d535))
+
+
+
+
+
 # 3.0.0 (2022-06-15)
 
 

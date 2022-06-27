@@ -2,7 +2,7 @@
     "name": "@frutbits/command-context",
     "description": "Wrapping all sapphire commands (interaction, message) in one context",
     "author": "FrutBits Indonesia <contact@frutbits.org>",
-    "version": "3.0.0",
+    "version": "3.1.0",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
     "exports": {
