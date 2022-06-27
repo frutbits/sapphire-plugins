@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/consistent-type-imports */
 import type { Args } from "@sapphire/framework";
-import type { CommandInteraction, ContextMenuInteraction, InteractionDeferReplyOptions, InteractionReplyOptions, MessagePayload } from "discord.js";
+import type { CommandInteraction, ContextMenuInteraction, InteractionDeferReplyOptions, InteractionReplyOptions, MessagePayload, Modal } from "discord.js";
 import { CommandContext } from "./CommandContext";
 
 export class BaseInteractionCommandContext extends CommandContext {
@@ -100,6 +100,10 @@ export class BaseInteractionCommandContext extends CommandContext {
 
     public deleteReply() {
         return this.data.context.deleteReply();
+    }
+
+    public showModal(modal: Modal): Promise<void> {
+        return this.data.context.showModal(modal);
     }
 
     public followUp(options: InteractionReplyOptions | MessagePayload | string) {
