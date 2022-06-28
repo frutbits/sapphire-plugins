@@ -23,15 +23,11 @@
   "scripts": {
     "build": "turbo run build",
     "clean": "rimraf \"packages/**/dist\" \"packages/**/.turbo\"",
+    "docs": "typedoc",
     "format": "turbo run format",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
-    "docs": "typedoc",
     "release": "lerna publish from-package --yes"
-  },
-  "engines": {
-    "node": ">=16.6.0",
-    "npm": ">=7.0.0"
   },
   "devDependencies": {
     "@sapphire/ts-config": "^3.3.4",
@@ -41,5 +37,9 @@
     "typedoc": "^0.22.18",
     "typedoc-plugin-djs-links": "^1.0.4",
     "typedoc-plugin-mdn-links": "^1.0.6"
+  },
+  "engines": {
+    "node": ">=16.6.0",
+    "npm": ">=7.0.0"
   }
 }

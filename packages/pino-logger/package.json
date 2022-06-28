@@ -1,10 +1,18 @@
 {
     "name": "@frutbits/pino-logger",
-    "description": "Plugin for @sapphire/framework to have pino logger",
-    "author": "FrutBits Indonesia <contact@frutbits.org>",
     "version": "3.1.0",
-    "main": "dist/index.js",
-    "module": "dist/index.mjs",
+    "description": "Plugin for @sapphire/framework to have pino logger",
+    "homepage": "https://github.com/frutbits/sapphire-plugins/tree/main/packages/pino-logger",
+    "bugs": {
+        "url": "https://github.com/frutbits/sapphire-plugins/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/frutbits/sapphire-plugins.git",
+        "directory": "packages/command-context"
+    },
+    "license": "AGPL-3.0",
+    "author": "FrutBits Indonesia <contact@frutbits.org>",
     "exports": {
         ".": {
             "import": "./dist/index.mjs",
@@ -16,47 +24,37 @@
             "types": "./register.d.ts"
         }
     },
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
     "files": [
         "dist/**/*.js*",
         "dist/**/*.mjs*",
         "dist/**/*.d*",
         "register.*"
     ],
-    "license": "AGPL-3.0",
-    "homepage": "https://github.com/frutbits/sapphire-plugins/tree/main/packages/pino-logger",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/frutbits/sapphire-plugins.git",
-        "directory": "packages/command-context"
-    },
-    "bugs": {
-        "url": "https://github.com/frutbits/sapphire-plugins/issues"
-    },
-    "readme": "https://github.com/frutbits/sapphire-plugins/blob/main/README.md",
-    "engines": {
-        "node": ">=16.6.0",
-        "npm": ">=7.0.0"
+    "scripts": {
+        "build": "rimraf dist && tsc -b src && rollup -c rollup.bundle.ts && npm run esm:default && npm run esm:register",
+        "esm:default": "gen-esm-wrapper dist/index.js dist/index.mjs",
+        "esm:register": "gen-esm-wrapper dist/register.js dist/register.mjs",
+        "format": "prettier --write src/**/*.ts",
+        "lint": "eslint src --ext ts",
+        "lint:fix": "eslint src --fix --ext ts",
+        "prepareForRelease": "npm run build && npm run format && npm run lint && npm run lint:fix",
+        "release": "npm publish --access public"
     },
     "eslintConfig": {
+        "parserOptions": {
+            "project": "./tsconfig.eslint.json"
+        },
         "extends": "@hazmi35/eslint-config/typescript",
         "ignorePatterns": [
             "dist/*",
             "jest.config.ts",
             "rollup.bundle.ts"
-        ],
-        "parserOptions": {
-            "project": "./tsconfig.eslint.json"
-        }
+        ]
     },
-    "scripts": {
-        "build": "rimraf dist && tsc -b src && rollup -c rollup.bundle.ts && npm run esm:default && npm run esm:register",
-        "esm:default": "gen-esm-wrapper dist/index.js dist/index.mjs",
-        "esm:register": "gen-esm-wrapper dist/register.js dist/register.mjs",
-        "lint": "eslint src --ext ts",
-        "lint:fix": "eslint src --fix --ext ts",
-        "format": "prettier --write src/**/*.ts",
-        "prepareForRelease": "npm run build && npm run format && npm run lint && npm run lint:fix",
-        "release": "npm publish --access public"
+    "dependencies": {
+        "pino": "^8.1.0"
     },
     "devDependencies": {
         "@hazmi35/eslint-config": "^8.4.2",
@@ -73,7 +71,9 @@
         "rollup-plugin-version-injector": "^1.3.3",
         "typescript": "4.7.4"
     },
-    "dependencies": {
-        "pino": "^8.1.0"
-    }
+    "engines": {
+        "node": ">=16.6.0",
+        "npm": ">=7.0.0"
+    },
+    "readme": "https://github.com/frutbits/sapphire-plugins/blob/main/README.md"
 }
