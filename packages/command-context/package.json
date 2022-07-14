@@ -47,7 +47,7 @@
         ]
     },
     "dependencies": {
-        "@sapphire/decorators": "^4.3.6",
+        "@sapphire/decorators": "^4.3.8",
         "@sapphire/utilities": "^3.7.0",
         "discord.js": "^13.8.1"
     },
