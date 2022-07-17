@@ -57,7 +57,7 @@
         "@sapphire/prettier-config": "1.4.3",
         "@typescript-eslint/eslint-plugin": "^5.30.6",
         "@typescript-eslint/parser": "^5.30.6",
-        "eslint": "8.19.0",
+        "eslint": "8.20.0",
         "gen-esm-wrapper": "^1.1.3",
         "prettier": "^2.7.1",
         "rimraf": "^3.0.2",
