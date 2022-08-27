@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/consistent-type-imports */
 import type { Args } from "@sapphire/framework";
-import type { CommandInteraction, ContextMenuInteraction, InteractionDeferReplyOptions, InteractionReplyOptions, MessagePayload, Modal } from "discord.js";
+import type { APIMessage } from "discord.js/node_modules/discord-api-types/payloads/v9/channel";
+import type { CommandInteraction, ContextMenuInteraction, InteractionDeferReplyOptions, InteractionReplyOptions, Message, MessagePayload, Modal } from "discord.js";
 import { CommandContext } from "./CommandContext";
 
 export class BaseInteractionCommandContext extends CommandContext {
@@ -90,7 +91,7 @@ export class BaseInteractionCommandContext extends CommandContext {
         return this.data.context.reply(options);
     }
 
-    public editReply(options: InteractionReplyOptions | MessagePayload | string) {
+    public editReply(options: InteractionReplyOptions | MessagePayload | string): Promise<APIMessage | Message> {
         return this.data.context.editReply(options);
     }
 
