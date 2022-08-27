@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/frutbits/sapphire-plugins/compare/v3.1.0...v3.2.0) (2022-08-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @sapphire/decorators to ^4.3.8 ([70c6abd](https://github.com/frutbits/sapphire-plugins/commit/70c6abd69bdf644a49693ca86aca24354a571358))
+* **deps:** update dependency @sapphire/utilities to ^3.7.0 ([efc0947](https://github.com/frutbits/sapphire-plugins/commit/efc0947407ef8421a071faf5565f7c452309714c))
+* ref to discord-api-types ([67a3060](https://github.com/frutbits/sapphire-plugins/commit/67a30603190116ef13114a91b1491314e64a38d1))
+* ref to discord-api-types ([5a59222](https://github.com/frutbits/sapphire-plugins/commit/5a59222bbd7db6b7cdc4ad5921e8a334d299a296))
+
+
+
+
+
 # [3.1.0](https://github.com/frutbits/sapphire-plugins/compare/v3.0.0...v3.1.0) (2022-06-27)
 
 
