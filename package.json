@@ -31,11 +31,11 @@
   },
   "devDependencies": {
     "@sapphire/ts-config": "^3.3.4",
-    "lerna": "^5.1.6",
+    "lerna": "^5.4.3",
     "rimraf": "3.0.2",
     "turbo": "latest",
-    "typedoc": "^0.22.18",
-    "typedoc-plugin-djs-links": "^1.0.4",
+    "typedoc": "^0.23.11",
+    "typedoc-plugin-djs-links": "^1.2.0",
     "typedoc-plugin-mdn-links": "^2.0.0"
   },
   "engines": {
