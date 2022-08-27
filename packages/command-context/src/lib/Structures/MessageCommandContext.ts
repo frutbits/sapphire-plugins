@@ -42,7 +42,7 @@ export class MessageCommandContext<Cached extends boolean = boolean> extends Com
         return this.data.context.embeds;
     }
 
-    public components() {
+    public components(): Message["components"] {
         return this.data.context.components;
     }
 
