@@ -55,7 +55,7 @@
     },
     "dependencies": {
         "discord.js": "^13.10.3",
-        "pino": "^8.4.2"
+        "pino": "^8.5.0"
     },
     "devDependencies": {
         "@hazmi35/eslint-config": "^8.4.2",
