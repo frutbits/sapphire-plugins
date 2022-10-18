@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.1](https://github.com/frutbits/sapphire-plugins/compare/v3.2.0...v3.2.1) (2022-10-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency discord.js to ^13.11.0 ([ca7e081](https://github.com/frutbits/sapphire-plugins/commit/ca7e081473cb6deacec9a0abe0da1e5c758e42fa))
+* **deps:** update dependency pino to ^8.5.0 ([66ec4f8](https://github.com/frutbits/sapphire-plugins/commit/66ec4f8b67af75e7cc34d910ac3e1824d4a8bf99))
+
+
+
+
+
 # [3.2.0](https://github.com/frutbits/sapphire-plugins/compare/v3.1.0...v3.2.0) (2022-08-27)
 
 **Note:** Version bump only for package @frutbits/pino-logger

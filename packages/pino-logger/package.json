@@ -1,6 +1,6 @@
 {
     "name": "@frutbits/pino-logger",
-    "version": "3.2.0",
+    "version": "3.2.1",
     "description": "Plugin for @sapphire/framework to have pino logger",
     "homepage": "https://github.com/frutbits/sapphire-plugins/tree/main/packages/pino-logger",
     "bugs": {
