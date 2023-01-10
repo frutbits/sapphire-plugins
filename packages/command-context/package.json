@@ -56,7 +56,7 @@
     "devDependencies": {
         "@hazmi35/eslint-config": "^8.4.2",
         "@sapphire/framework": "^3.2.0",
-        "@sapphire/prettier-config": "^1.4.4",
+        "@sapphire/prettier-config": "^1.4.5",
         "@typescript-eslint/eslint-plugin": "^5.35.1",
         "@typescript-eslint/parser": "^5.35.1",
         "eslint": "8.22.0",
