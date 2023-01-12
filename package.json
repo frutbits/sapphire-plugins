@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@sapphire/ts-config": "^3.3.4",
-    "lerna": "^5.5.1",
+    "lerna": "^6.4.1",
     "rimraf": "3.0.2",
     "turbo": "latest",
     "typedoc": "^0.23.14",
