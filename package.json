@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "@sapphire/ts-config": "^3.3.4",
+    "@types/node": "^18.11.18",
     "lerna": "^6.4.1",
     "rimraf": "4.1.2",
     "turbo": "latest",
@@ -39,7 +40,7 @@
     "typedoc-plugin-mdn-links": "^2.0.2"
   },
   "engines": {
-    "node": ">=16.6.0",
+    "node": ">=18.0.0",
     "npm": ">=7.0.0"
   }
 }
