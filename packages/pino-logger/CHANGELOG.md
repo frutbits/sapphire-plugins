@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/frutbits/sapphire-plugins/compare/v3.2.1...v3.3.0) (2023-02-04)
+
+
+### Bug Fixes
+
+* **pino-logger:** install discord.js v14 ([359e92a](https://github.com/frutbits/sapphire-plugins/commit/359e92a22b7776f67027375df0a4d2827e040be6))
+* **rollup:** rollup.bundle.ts -> rollup.bundle.mjs ([d37c84c](https://github.com/frutbits/sapphire-plugins/commit/d37c84c00487dae088f472a926d3f066912aff7d))
+
+
+### Features
+
+* **pino-logger:** remove discord.js dependency ([f212a8d](https://github.com/frutbits/sapphire-plugins/commit/f212a8d082472595cb3f9489d004e356e0b6f3da))
+
+
+
+
+
 ## [3.2.1](https://github.com/frutbits/sapphire-plugins/compare/v3.2.0...v3.2.1) (2022-10-18)
 
 

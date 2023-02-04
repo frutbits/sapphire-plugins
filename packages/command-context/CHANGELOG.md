@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/frutbits/sapphire-plugins/compare/v3.2.1...v3.3.0) (2023-02-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @sapphire/decorators to v6 ([#90](https://github.com/frutbits/sapphire-plugins/issues/90)) ([f9a21d7](https://github.com/frutbits/sapphire-plugins/commit/f9a21d79211fa6987c7b0b82072af26abb625ac0))
+* **rollup:** rollup.bundle.ts -> rollup.bundle.mjs ([d37c84c](https://github.com/frutbits/sapphire-plugins/commit/d37c84c00487dae088f472a926d3f066912aff7d))
+
+
+### Features
+
+* **command-context:** move @sapphire/framework to dependencies ([6ae4ad3](https://github.com/frutbits/sapphire-plugins/commit/6ae4ad3ac2e8f1a20658d4d2965ffa4711eeec9b))
+
+
+
+
+
 ## [3.2.1](https://github.com/frutbits/sapphire-plugins/compare/v3.2.0...v3.2.1) (2022-10-18)
 
 
