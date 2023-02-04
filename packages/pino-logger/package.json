@@ -54,7 +54,6 @@
         ]
     },
     "dependencies": {
-        "discord.js": "^13.11.0",
         "pino": "^8.5.0"
     },
     "devDependencies": {
