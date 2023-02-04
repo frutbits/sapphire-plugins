@@ -29,7 +29,7 @@
         "dist/**/*.d*"
     ],
     "scripts": {
-        "build": "rimraf dist && tsc -b src && rollup -c rollup.bundle.ts && npm run esm:default",
+        "build": "rimraf dist && tsc -b src && rollup -c rollup.bundle.mjs && npm run esm:default",
         "esm:default": "gen-esm-wrapper dist/index.js dist/index.mjs",
         "format": "prettier --write src/**/*.ts",
         "lint": "eslint src --ext ts",

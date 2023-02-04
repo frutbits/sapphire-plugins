@@ -33,7 +33,7 @@
         "register.*"
     ],
     "scripts": {
-        "build": "rimraf dist && tsc -b src && rollup -c rollup.bundle.ts && npm run esm:default && npm run esm:register",
+        "build": "rimraf dist && tsc -b src && rollup -c rollup.bundle.mjs && npm run esm:default && npm run esm:register",
         "esm:default": "gen-esm-wrapper dist/index.js dist/index.mjs",
         "esm:register": "gen-esm-wrapper dist/register.js dist/register.mjs",
         "format": "prettier --write src/**/*.ts",
