@@ -56,7 +56,7 @@
     "dependencies": {
         "@sapphire/framework": "^4.0.2",
         "discord.js": "^14.7.1",
-        "pino": "^8.9.0"
+        "pino": "^8.10.0"
     },
     "devDependencies": {
         "@hazmi35/eslint-config": "^8.7.1",
