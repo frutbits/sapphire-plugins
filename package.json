@@ -36,7 +36,7 @@
     "rimraf": "4.1.2",
     "turbo": "latest",
     "typedoc": "^0.23.24",
-    "typedoc-plugin-djs-links": "^1.2.0",
+    "typedoc-plugin-djs-links": "^2.0.0",
     "typedoc-plugin-mdn-links": "^2.0.2"
   },
   "engines": {
