@@ -54,7 +54,7 @@
         ]
     },
     "dependencies": {
-        "@sapphire/framework": "^4.0.2",
+        "@sapphire/framework": "^4.4.4",
         "discord.js": "^14.7.1",
         "pino": "^8.10.0"
     },
