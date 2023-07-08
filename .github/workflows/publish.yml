@@ -15,22 +15,30 @@ jobs:
             token_secret_key: GITHUB_TOKEN
     steps:
       - name: Checkout repository
-        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3.3.0
+        uses: actions/checkout@8f4b7f84864484a7bf31766abe9204da3cbe65b3 # v3.5.0
+        with:
+          fetch-depth: 2
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@c3b53f6a16e57305370b4ae5a540c2077a1d50dd # v2.2.4
+        with:
+          version: latest
 
       - name: Setup Node.js
         uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c # v3.6.0
         with:
           node-version-file: .node-version
-          cache: 'npm'
+          check-latest: true
+          cache: 'pnpm'
           registry-url: ${{ matrix.registry }}
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Compile/Build TypeScript project
-        run: npm run build
+        run: pnpm run build
 
       - name: Publish package to npm and GitHub packages registry
-        run: npm run release -- --registry ${{ matrix.registry }} --no-verify-access
+        run: pnpm run release -- --registry ${{ matrix.registry }} --no-verify-access
         env:
           NODE_AUTH_TOKEN: ${{ secrets[matrix.token_secret_key] }}
