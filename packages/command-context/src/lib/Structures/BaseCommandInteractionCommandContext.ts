@@ -1,13 +1,12 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/consistent-type-imports */
 import type { Args } from "@sapphire/framework";
-import type { APIMessage } from "discord.js/node_modules/discord-api-types/payloads/v9/channel";
-import type { CommandInteraction, ContextMenuInteraction, InteractionDeferReplyOptions, InteractionReplyOptions, Message, MessagePayload, Modal } from "discord.js";
+import type { APIMessage, CommandInteraction, ContextMenuCommandInteraction, InteractionDeferReplyOptions, InteractionReplyOptions, Message, MessagePayload } from "discord.js";
 import { CommandContext } from "./CommandContext";
 
 export class BaseInteractionCommandContext extends CommandContext {
-    declare protected readonly data: { context: CommandInteraction | ContextMenuInteraction };
-    public constructor(context: CommandInteraction | ContextMenuInteraction, args?: Args) {
+    declare protected readonly data: { context: CommandInteraction | ContextMenuCommandInteraction };
+    public constructor(context: CommandInteraction | ContextMenuCommandInteraction, args?: Args) {
         super(context, args);
     }
 
@@ -35,24 +34,24 @@ export class BaseInteractionCommandContext extends CommandContext {
         return this.data.context.inRawGuild();
     }
 
-    public isApplicationCommand() {
-        return this.data.context.isApplicationCommand();
+    public isChatInputCommand() {
+        return this.data.context.isChatInputCommand();
     }
 
     public isCommand() {
         return this.data.context.isCommand();
     }
 
-    public isContextMenu() {
-        return this.data.context.isContextMenu();
+    public isContextisContextMenuCommandMenu() {
+        return this.data.context.isContextMenuCommand();
     }
 
-    public isUserContextMenu() {
-        return this.data.context.isUserContextMenu();
+    public isUserContextisUserContextMenuCommandMenu() {
+        return this.data.context.isUserContextMenuCommand();
     }
 
-    public isMessageContextMenu() {
-        return this.data.context.isMessageContextMenu();
+    public isMessageContextMenuCommand() {
+        return this.data.context.isMessageContextMenuCommand();
     }
 
     public get commandId() {
@@ -103,7 +102,7 @@ export class BaseInteractionCommandContext extends CommandContext {
         return this.data.context.deleteReply();
     }
 
-    public showModal(modal: Modal): Promise<void> {
+    public showModal(modal: Parameters<CommandInteraction["showModal"]>["0"]): Promise<void> {
         return this.data.context.showModal(modal);
     }
 

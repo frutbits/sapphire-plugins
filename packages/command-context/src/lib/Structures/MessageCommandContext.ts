@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/consistent-type-imports */
 import type { Args } from "@sapphire/framework";
-import type { AwaitMessageCollectorOptionsParams, AwaitReactionsOptions, Collection, EmojiIdentifierResolvable, Message, MessageCollectorOptionsParams, MessageEditOptions, MessagePayload, MessageReaction, ReactionCollectorOptions, ReplyMessageOptions, StartThreadOptions } from "discord.js";
+import type { AwaitReactionsOptions, Collection, EmojiIdentifierResolvable, Message, MessageEditOptions, MessagePayload, MessageReaction, MessageReplyOptions, ReactionCollectorOptions, StartThreadOptions } from "discord.js";
 import { CommandContext } from "./CommandContext";
 
 export class MessageCommandContext<Cached extends boolean = boolean> extends CommandContext {
@@ -118,11 +118,11 @@ export class MessageCommandContext<Cached extends boolean = boolean> extends Com
         return this.data.context.awaitReactions(options);
     }
 
-    public createMessageComponentCollector(options?: MessageCollectorOptionsParams<"ACTION_ROW", Cached>) {
+    public createMessageComponentCollector(options?: Parameters<Message["createMessageComponentCollector"]>[0]) {
         return this.data.context.createMessageComponentCollector(options);
     }
 
-    public awaitMessageComponent(options?: AwaitMessageCollectorOptionsParams<"ACTION_ROW", Cached>) {
+    public awaitMessageComponent(options?: Parameters<Message["awaitMessageComponent"]>[0]) {
         return this.data.context.awaitMessageComponent(options);
     }
 
@@ -166,7 +166,7 @@ export class MessageCommandContext<Cached extends boolean = boolean> extends Com
         return this.data.context.delete();
     }
 
-    public reply(options: MessagePayload | ReplyMessageOptions | string) {
+    public reply(options: MessagePayload | MessageReplyOptions | string) {
         return this.data.context.reply(options);
     }
 

@@ -2,7 +2,8 @@
 /* eslint-disable class-methods-use-this */
 /* eslint-disable @typescript-eslint/consistent-type-imports */
 import type { ILogger } from "@sapphire/framework";
-import pino, { LoggerOptions, Logger } from "pino";
+import pino from "pino";
+import type { LoggerOptions, Logger } from "pino";
 
 export class PinoLogger implements ILogger {
     protected pino: Logger;

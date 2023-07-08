@@ -3,15 +3,14 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import type { Args } from "@sapphire/framework";
 import { cast } from "@sapphire/utilities";
-import { CommandInteraction, ContextMenuInteraction, GuildMember, Interaction, InteractionReplyOptions, Message, MessageOptions, MessagePayload } from "discord.js";
-import type { BaseInteractionCommandContext } from "./BaseCommandInteractionCommandContext";
+import { BaseInteraction, CommandInteraction, ContextMenuCommandInteraction, GuildMember, Message, MessagePayload, type InteractionReplyOptions, type MessageCreateOptions } from "discord.js";
 import type { CommandInteractionCommandContext } from "./CommandInteractionCommandContext";
-import type { ContextMenuInteractionCommandContext } from "./ContextMenuInteractionCommandContext";
 import type { MessageCommandContext } from "./MessageCommandContext";
+import type { ContextMenuInteractionCommandContext } from "./ContextMenuInteractionCommandContext";
 
 export class CommandContext {
-    protected readonly data!: { args?: Args; context: CommandInteraction | ContextMenuInteraction | Message };
-    public constructor(context: CommandInteraction | ContextMenuInteraction | Message, args?: Args) {
+    protected readonly data!: { args?: Args; context: CommandInteraction | ContextMenuCommandInteraction | Message };
+    public constructor(context: CommandInteraction | ContextMenuCommandInteraction | Message, args?: Args) {
         this.data = { context, args };
     }
 
@@ -24,7 +23,7 @@ export class CommandContext {
     }
 
     public get author() {
-        return this.data.context instanceof Interaction ? this.data.context.user : this.data.context.author;
+        return this.data.context instanceof BaseInteraction ? this.data.context.user : this.data.context.author;
     }
 
     public get createdTimestamp() {
@@ -79,22 +78,17 @@ export class CommandContext {
         return this.data.context instanceof Message;
     }
 
-    public isInteractionContext(): this is BaseInteractionCommandContext {
-        return this.data.context instanceof Interaction;
-    }
-
     public isCommandInteractionContext(): this is CommandInteractionCommandContext {
         return this.data.context instanceof CommandInteraction;
     }
 
     public isContextMenuInteractionContext(): this is ContextMenuInteractionCommandContext {
-        return this.data.context instanceof ContextMenuInteraction;
+        return this.data.context instanceof ContextMenuCommandInteraction;
     }
 
-    public async send(options: InteractionReplyOptions | MessageOptions | MessagePayload | string, fetchReply?: true): Promise<Message>;
-    public async send(options: InteractionReplyOptions | MessageOptions | MessagePayload | string, fetchReply?: false): Promise<void>;
-    public async send(options: InteractionReplyOptions | MessageOptions | MessagePayload | string, fetchReply = false) {
-        if (this.isInteractionContext()) {
+    public async send(options: InteractionReplyOptions | MessageCreateOptions | MessagePayload | string, fetchReply?: true): Promise<Message>;
+    public async send(options: InteractionReplyOptions | MessageCreateOptions | MessagePayload | string, fetchReply = false) {
+        if (this.isCommandInteractionContext()) {
             if (this.isCommand()) {
                 if (this.deferred && !this.replied) {
                     return this.editReply(cast<InteractionReplyOptions | MessagePayload | string>(options));
@@ -106,7 +100,7 @@ export class CommandContext {
                 }
             }
 
-            if (this.isContextMenu()) {
+            if (this.isContextMenuInteractionContext()) {
                 if (this.deferred && !this.replied) {
                     return this.editReply(cast<InteractionReplyOptions | MessagePayload | string>(options));
                 }
@@ -123,6 +117,6 @@ export class CommandContext {
             return msg;
         }
 
-        return this.channel!.send(cast<MessageOptions | MessagePayload | string>(options));
+        return this.channel!.send(cast<MessageCreateOptions | MessagePayload | string>(options));
     }
 }

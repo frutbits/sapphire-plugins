@@ -1,7 +1,9 @@
 /* eslint-disable @typescript-eslint/consistent-type-imports */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-import { Args, Awaitable, Command, CommandOptions, PieceContext } from "@sapphire/framework";
-import type { CommandInteraction, ContextMenuInteraction, Message } from "discord.js";
+import { Args, Command } from "@sapphire/framework";
+import type { Awaitable } from "@sapphire/utilities";
+import type { PieceContext, CommandOptions } from "@sapphire/framework";
+import type { CommandInteraction, ContextMenuCommandInteraction, Message } from "discord.js";
 import type { CommandContext } from "./Structures/CommandContext";
 import { CommandInteractionCommandContext } from "./Structures/CommandInteractionCommandContext";
 import { ContextMenuInteractionCommandContext } from "./Structures/ContextMenuInteractionCommandContext";
@@ -20,7 +22,7 @@ export abstract class ContextCommand extends Command {
         return this.contextRun(new CommandInteractionCommandContext(interaction));
     }
 
-    public contextMenuRun(interaction: ContextMenuInteraction) {
+    public contextMenuRun(interaction: ContextMenuCommandInteraction) {
         return this.contextRun(new ContextMenuInteractionCommandContext(interaction));
     }
 
