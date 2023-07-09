@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://github.com/frutbits/sapphire-plugins/compare/v4.0.1...v4.1.0) (2023-07-09)
+
+
+### Features
+
+* separate user & message context command ([42bd5b6](https://github.com/frutbits/sapphire-plugins/commit/42bd5b6178d90371d2154b34bb703e37ac7f1ce3))
+
+
+
+
+
 ## [4.0.1](https://github.com/frutbits/sapphire-plugins/compare/v4.0.0...v4.0.1) (2023-07-09)
 
 
