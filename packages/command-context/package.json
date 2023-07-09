@@ -52,7 +52,8 @@
         "@sapphire/decorators": "^6.0.1",
         "@sapphire/framework": "^4.5.0",
         "@sapphire/utilities": "^3.12.0",
-        "discord.js": "^14.11.0"
+        "discord.js": "^14.11.0",
+        "tslib": "^2.6.0"
     },
     "devDependencies": {
         "@hazmi35/eslint-config": "^10.0.0",

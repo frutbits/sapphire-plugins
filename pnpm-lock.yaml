@@ -47,6 +47,9 @@ importers:
       discord.js:
         specifier: ^14.11.0
         version: 14.11.0
+      tslib:
+        specifier: ^2.6.0
+        version: 2.6.0
     devDependencies:
       '@hazmi35/eslint-config':
         specifier: ^10.0.0
@@ -93,6 +96,9 @@ importers:
       pino:
         specifier: ^8.14.1
         version: 8.14.1
+      tslib:
+        specifier: ^2.6.0
+        version: 2.6.0
     devDependencies:
       '@hazmi35/eslint-config':
         specifier: ^10.0.0

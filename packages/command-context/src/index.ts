@@ -1,3 +1,4 @@
+import "tslib";
 export * from "./lib/ContextCommand";
 export * from "./lib/Structures/CommandContext";
 export * from "./lib/Structures/BaseCommandInteractionCommandContext";
