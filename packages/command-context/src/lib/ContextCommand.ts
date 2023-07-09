@@ -3,11 +3,12 @@
 import { Args, Command } from "@sapphire/framework";
 import type { Awaitable } from "@sapphire/utilities";
 import type { PieceContext, CommandOptions } from "@sapphire/framework";
-import type { ChatInputCommandInteraction, ContextMenuCommandInteraction, Message } from "discord.js";
+import { UserContextMenuCommandInteraction, type ChatInputCommandInteraction, type Message, type MessageContextMenuCommandInteraction } from "discord.js";
 import type { CommandContext } from "./Structures/CommandContext";
 import { CommandInteractionCommandContext } from "./Structures/CommandInteractionCommandContext";
-import { ContextMenuInteractionCommandContext } from "./Structures/ContextMenuInteractionCommandContext";
+import { UserContextMenuInteractionCommandContext } from "./Structures/UserContextMenuInteractionCommandContext";
 import { MessageCommandContext } from "./Structures/MessageCommandContext";
+import { MessageContextMenuInteractionCommandContext } from "./Structures/MessageContextMenuInteractionCommandContext.js";
 
 export abstract class ContextCommand extends Command {
     public constructor(context: PieceContext, options?: CommandOptions | undefined) {
@@ -22,8 +23,10 @@ export abstract class ContextCommand extends Command {
         return this.contextRun(new CommandInteractionCommandContext(interaction));
     }
 
-    public contextMenuRun(interaction: ContextMenuCommandInteraction) {
-        return this.contextRun(new ContextMenuInteractionCommandContext(interaction));
+    public contextMenuRun(interaction: MessageContextMenuCommandInteraction | UserContextMenuCommandInteraction) {
+        return interaction instanceof UserContextMenuCommandInteraction
+            ? this.contextRun(new UserContextMenuInteractionCommandContext(interaction))
+            : this.contextRun(new MessageContextMenuInteractionCommandContext(interaction));
     }
 
     public abstract contextRun(ctx: CommandContext): Awaitable<unknown>;

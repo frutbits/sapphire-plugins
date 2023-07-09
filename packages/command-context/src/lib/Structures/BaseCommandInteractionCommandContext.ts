@@ -42,11 +42,11 @@ export class BaseInteractionCommandContext extends CommandContext {
         return this.data.context.isCommand();
     }
 
-    public isContextisContextMenuCommandMenu() {
+    public isContextMenuCommand() {
         return this.data.context.isContextMenuCommand();
     }
 
-    public isUserContextisUserContextMenuCommandMenu() {
+    public isUserContextMenuCommand() {
         return this.data.context.isUserContextMenuCommand();
     }
 

@@ -3,10 +3,11 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import type { Args } from "@sapphire/framework";
 import { cast } from "@sapphire/utilities";
-import { BaseInteraction, CommandInteraction, ContextMenuCommandInteraction, GuildMember, Message, MessagePayload, type InteractionReplyOptions, type MessageCreateOptions, ChatInputCommandInteraction } from "discord.js";
+import { BaseInteraction, CommandInteraction, ContextMenuCommandInteraction, GuildMember, Message, MessagePayload, type InteractionReplyOptions, type MessageCreateOptions, ChatInputCommandInteraction, MessageContextMenuCommandInteraction, UserContextMenuCommandInteraction } from "discord.js";
 import type { CommandInteractionCommandContext } from "./CommandInteractionCommandContext";
 import type { MessageCommandContext } from "./MessageCommandContext";
-import type { ContextMenuInteractionCommandContext } from "./ContextMenuInteractionCommandContext";
+import type { UserContextMenuInteractionCommandContext } from "./UserContextMenuInteractionCommandContext.js";
+import type { MessageContextMenuInteractionCommandContext } from "./MessageContextMenuInteractionCommandContext.js";
 
 export class CommandContext {
     protected readonly data!: { args?: Args; context: ChatInputCommandInteraction | ContextMenuCommandInteraction | Message };
@@ -82,8 +83,16 @@ export class CommandContext {
         return this.data.context instanceof CommandInteraction;
     }
 
-    public isContextMenuInteractionContext(): this is ContextMenuInteractionCommandContext {
-        return this.data.context instanceof ContextMenuCommandInteraction;
+    public isUserContextMenuInteractionContext(): this is UserContextMenuInteractionCommandContext {
+        return this.data.context instanceof UserContextMenuCommandInteraction;
+    }
+
+    public isMessageContextMenuInteractionContext(): this is MessageContextMenuInteractionCommandContext {
+        return this.data.context instanceof MessageContextMenuCommandInteraction;
+    }
+
+    public isContextCommandContext(): this is CommandInteractionCommandContext | MessageContextMenuInteractionCommandContext | UserContextMenuInteractionCommandContext {
+        return this.isCommandInteractionContext() || this.isUserContextMenuInteractionContext() || this.isMessageContextMenuInteractionContext();
     }
 
     public async send(options: InteractionReplyOptions | MessageCreateOptions | MessagePayload | string, fetchReply?: true): Promise<Message>;
@@ -100,7 +109,7 @@ export class CommandContext {
                 }
             }
 
-            if (this.isContextMenuInteractionContext()) {
+            if (this.isContextCommandContext()) {
                 if (this.deferred && !this.replied) {
                     return this.editReply(cast<InteractionReplyOptions | MessagePayload | string>(options));
                 }
