@@ -3,14 +3,14 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import type { Args } from "@sapphire/framework";
 import { cast } from "@sapphire/utilities";
-import { BaseInteraction, CommandInteraction, ContextMenuCommandInteraction, GuildMember, Message, MessagePayload, type InteractionReplyOptions, type MessageCreateOptions } from "discord.js";
+import { BaseInteraction, CommandInteraction, ContextMenuCommandInteraction, GuildMember, Message, MessagePayload, type InteractionReplyOptions, type MessageCreateOptions, ChatInputCommandInteraction } from "discord.js";
 import type { CommandInteractionCommandContext } from "./CommandInteractionCommandContext";
 import type { MessageCommandContext } from "./MessageCommandContext";
 import type { ContextMenuInteractionCommandContext } from "./ContextMenuInteractionCommandContext";
 
 export class CommandContext {
-    protected readonly data!: { args?: Args; context: CommandInteraction | ContextMenuCommandInteraction | Message };
-    public constructor(context: CommandInteraction | ContextMenuCommandInteraction | Message, args?: Args) {
+    protected readonly data!: { args?: Args; context: ChatInputCommandInteraction | ContextMenuCommandInteraction | Message };
+    public constructor(context: ChatInputCommandInteraction | ContextMenuCommandInteraction | Message, args?: Args) {
         this.data = { context, args };
     }
 

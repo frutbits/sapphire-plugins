@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/consistent-type-imports */
 import type { Args } from "@sapphire/framework";
-import type { APIMessage, CommandInteraction, ContextMenuCommandInteraction, InteractionDeferReplyOptions, InteractionReplyOptions, Message, MessagePayload } from "discord.js";
+import type { APIMessage, ChatInputCommandInteraction, ContextMenuCommandInteraction, InteractionDeferReplyOptions, InteractionReplyOptions, Message, MessagePayload } from "discord.js";
 import { CommandContext } from "./CommandContext";
 
 export class BaseInteractionCommandContext extends CommandContext {
-    declare protected readonly data: { context: CommandInteraction | ContextMenuCommandInteraction };
-    public constructor(context: CommandInteraction | ContextMenuCommandInteraction, args?: Args) {
+    declare protected readonly data: { context: ChatInputCommandInteraction | ContextMenuCommandInteraction };
+    public constructor(context: ChatInputCommandInteraction | ContextMenuCommandInteraction, args?: Args) {
         super(context, args);
     }
 
@@ -102,7 +102,7 @@ export class BaseInteractionCommandContext extends CommandContext {
         return this.data.context.deleteReply();
     }
 
-    public showModal(modal: Parameters<CommandInteraction["showModal"]>["0"]): Promise<void> {
+    public showModal(modal: Parameters<ChatInputCommandInteraction["showModal"]>["0"]): Promise<void> {
         return this.data.context.showModal(modal);
     }
 
