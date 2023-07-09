@@ -1,36 +1,36 @@
 {
-	"packages": [
-		"packages/*"
-	],
-	"version": "3.3.0",
-	"npmClient": "pnpm",
-	"command": {
-		"publish": {
-			"conventionalCommits": true,
-			"push": true,
-			"ignoreChanges": [
-				"**/tests/**"
-			],
-			"registry": "https://registry.npmjs.org/"
-		},
-		"version": {
-			"allowBranch": "main",
-			"conventionalCommits": true,
-			"push": true,
-			"createRelease": "github",
-			"message": "chore(release): publish"
-		},
-		"create": {
-			"license": "AGPL-3.0",
-			"keywords": [
-				"plugin",
-				"bot",
-				"typescript",
-				"ts",
-				"yarn",
-				"discord",
-				"sapphire"
-			]
-		}
-	}
+  "packages": [
+    "packages/*"
+  ],
+  "version": "4.0.0",
+  "npmClient": "pnpm",
+  "command": {
+    "publish": {
+      "conventionalCommits": true,
+      "push": true,
+      "ignoreChanges": [
+        "**/tests/**"
+      ],
+      "registry": "https://registry.npmjs.org/"
+    },
+    "version": {
+      "allowBranch": "main",
+      "conventionalCommits": true,
+      "push": true,
+      "createRelease": "github",
+      "message": "chore(release): publish"
+    },
+    "create": {
+      "license": "AGPL-3.0",
+      "keywords": [
+        "plugin",
+        "bot",
+        "typescript",
+        "ts",
+        "yarn",
+        "discord",
+        "sapphire"
+      ]
+    }
+  }
 }

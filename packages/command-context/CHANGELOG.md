@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/frutbits/sapphire-plugins/compare/v3.3.0...v4.0.0) (2023-07-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @sapphire/utilities to ^3.11.2 ([d737b94](https://github.com/frutbits/sapphire-plugins/commit/d737b94adf860245b87f8807feb87ee095e362f9))
+* **deps:** update sapphire dependencies ([da6bbb7](https://github.com/frutbits/sapphire-plugins/commit/da6bbb776f7681c018a86f841a3a8cc285f5efc2))
+* extends eslint tsconfig ([1b3b25e](https://github.com/frutbits/sapphire-plugins/commit/1b3b25e04fcd229b5e2b680c2f98f06858a38c25))
+* import tslib ([cbd0359](https://github.com/frutbits/sapphire-plugins/commit/cbd03594179a3a1f1ebd1b9c17504f55302a08ea))
+
+
+### Features
+
+* update all deps to latest version ([bc558ec](https://github.com/frutbits/sapphire-plugins/commit/bc558ec428dbb1dc719ff2c5cc506217c3845734))
+
+
+
+
+
 # [3.3.0](https://github.com/frutbits/sapphire-plugins/compare/v3.2.1...v3.3.0) (2023-02-04)
 
 
