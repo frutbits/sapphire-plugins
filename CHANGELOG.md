@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.1](https://github.com/frutbits/sapphire-plugins/compare/v4.0.0...v4.0.1) (2023-07-09)
+
+
+### Bug Fixes
+
+* **command-context:** use chatInputCommandInteraction instead ([b476696](https://github.com/frutbits/sapphire-plugins/commit/b4766964dad60969dc1df3993192acf39718452a))
+* use ChatInputCommandInteraction ([86dbf48](https://github.com/frutbits/sapphire-plugins/commit/86dbf4891982403d98a8fbace4d5e0758aea78bf))
+
+
+
+
+
 # [4.0.0](https://github.com/frutbits/sapphire-plugins/compare/v3.3.0...v4.0.0) (2023-07-09)
 
 

@@ -1,6 +1,6 @@
 {
     "name": "@frutbits/command-context",
-    "version": "4.0.0",
+    "version": "4.0.1",
     "description": "Wrapping all sapphire commands (interaction, message) in one context",
     "homepage": "https://github.com/frutbits/sapphire-plugins/tree/main/packages/command-context",
     "bugs": {
