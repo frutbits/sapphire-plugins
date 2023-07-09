@@ -3,7 +3,7 @@
 import { Args, Command } from "@sapphire/framework";
 import type { Awaitable } from "@sapphire/utilities";
 import type { PieceContext, CommandOptions } from "@sapphire/framework";
-import type { CommandInteraction, ContextMenuCommandInteraction, Message } from "discord.js";
+import type { ChatInputCommandInteraction, ContextMenuCommandInteraction, Message } from "discord.js";
 import type { CommandContext } from "./Structures/CommandContext";
 import { CommandInteractionCommandContext } from "./Structures/CommandInteractionCommandContext";
 import { ContextMenuInteractionCommandContext } from "./Structures/ContextMenuInteractionCommandContext";
@@ -18,7 +18,7 @@ export abstract class ContextCommand extends Command {
         return this.contextRun(new MessageCommandContext(message, args));
     }
 
-    public chatInputRun(interaction: CommandInteraction) {
+    public chatInputRun(interaction: ChatInputCommandInteraction) {
         return this.contextRun(new CommandInteractionCommandContext(interaction));
     }
 

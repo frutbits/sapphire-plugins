@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/consistent-type-imports */
 import { Piece, Precondition } from "@sapphire/framework";
-import type { Message, CommandInteraction, ContextMenuCommandInteraction } from "discord.js";
+import type { Message, ContextMenuCommandInteraction, ChatInputCommandInteraction } from "discord.js";
 import type { CommandContext } from "./Structures/CommandContext.js";
 import { CommandInteractionCommandContext } from "./Structures/CommandInteractionCommandContext";
 import { ContextMenuInteractionCommandContext } from "./Structures/ContextMenuInteractionCommandContext";
@@ -16,7 +16,7 @@ export abstract class ContextPrecondition extends Precondition {
         return this.contextRun(new MessageCommandContext(message));
     }
 
-    public chatInputRun(interaction: CommandInteraction) {
+    public chatInputRun(interaction: ChatInputCommandInteraction) {
         return this.contextRun(new CommandInteractionCommandContext(interaction));
     }
 
